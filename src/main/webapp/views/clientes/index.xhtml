@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Clientes</title>
+    </h:head>
+    <h:body>
+<!--        <h1>${clienteControlador.test}</h1>-->
+        <p:ajaxStatus style="width:16px;height:16px;" id="ajaxStatusPanel">
+            <f:facet name="start">
+                <h:outputText value="iniciando" />
+            </f:facet>
+
+            <f:facet name="complete">
+                <h:outputText value="" />
+            </f:facet>
+        </p:ajaxStatus>
+
+        <h:form prependId="false">
+
+            <p:growl id="messages" showDetail="true" />
+
+            <p:dataTable value="#{clienteControlador.clientes}" var="item"
+                         editable="true">
+
+                <f:facet name="header">  
+                        Listado de clientes
+                </f:facet>
+
+                <p:column headerText="Nombre">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{item.nombre}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{item.nombre}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column headerText="Direccion">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{item.direccion}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{item.direccion}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column headerText="DUI">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{item.dui}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{item.dui}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column headerText="Telefono">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{item.telefono}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{item.telefono}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column headerText="Email">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{item.email}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{item.email}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <f:facet name="footer">
+                    <h:commandButton value="Regresar" action="index" />
+                </f:facet>
+
+                <p:column headerText="Opciones" style="width:50px">
+                    <p:rowEditor />
+                </p:column>
+
+                <p:ajax event="rowEdit" listener="#{clienteControlador.editListener}">
+                </p:ajax>
+
+            </p:dataTable>
+
+        </h:form>
+    </h:body>
+</html>
+
