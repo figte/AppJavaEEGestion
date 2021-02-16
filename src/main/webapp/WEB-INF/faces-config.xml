@@ -34,5 +34,10 @@
         </resource-bundle>
         
         <message-bundle>jsf</message-bundle>
-    </application> 
+    </application>
+    <managed-bean>
+        <managed-bean-name>pruebabean</managed-bean-name>
+        <managed-bean-class>personal.app.managedbeans.PruebaBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
 </faces-config>

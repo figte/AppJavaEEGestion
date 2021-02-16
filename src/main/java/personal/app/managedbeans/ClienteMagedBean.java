@@ -5,17 +5,22 @@
  */
 package personal.app.managedbeans;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import java.io.Serializable;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
 
 /**
  *
  * @author FIGTE
  */
-@ManagedBean
+@Named(value = "cliente")
 @RequestScoped
-public class ClienteMagedBean {
+public class ClienteMagedBean implements Serializable{
 
+    
+    private static final long serialVersionUID = 1L;
+     
     String prueba = "test";
 
     /**

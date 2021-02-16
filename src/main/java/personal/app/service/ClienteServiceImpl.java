@@ -9,9 +9,11 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.jws.WebService;
 import personal.app.dao.ClienteDaoImp;
 import personal.app.idao.ClienteDao;
 import personal.app.iservice.ClienteService;
+import personal.app.iwebservices.ClienteWebService;
 import personal.app.model.Cliente;
 
 /**
