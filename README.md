@@ -22,7 +22,9 @@ y con el mismo nombre utilizado en las clases DAO (paquete: personal.app.dao).
 
 -Enlaces:
 
-    * para visualizar la aplicacion con el mantenimiento: http://<<host:puerto>>/crudJavaEE/cliente    ejemplo: http://localhost:8080/crudJavaEE/cliente
+    * para visualizar la aplicacion con el mantenimiento modo 1,  sevlet y jsp: http://<<host:puerto>>/crudJavaEE/cliente    ejemplo: http://localhost:8080/crudJavaEE/cliente
 
-    * para visualizar la documentacion de la API Rest con Swagger: http://<<host:puerto>>/crudJavaEE/api/apiee/index.html   ejemplo: http://localhost:8080/crudJavaEE/api/apiee/index.html
+    * para visualizar la aplicacion con el mantenimiento modo 2, JSF : http://<<host:puerto>>/crudJavaEE/faces/views/clientes/index.xhtml   ejemplo: http://localhost:8080/crudJavaEE/faces/views/clientes/index.xhtml
+
+    * para visualizar el modo 3, la documentacion de la API Rest con Swagger: http://<<host:puerto>>/crudJavaEE/api/apiee/index.html   ejemplo: http://localhost:8080/crudJavaEE/api/apiee/index.html
 
